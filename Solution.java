@@ -20,7 +20,8 @@ public class Solution {
             for (int i = 0; i < nums.length - midIndex; i++) {
                 next[i] = nums[midIndex + i];
             }
-            return binarySearch(next, target);
+            int val = binarySearch(next, target);
+            return val != -1 ? midIndex + val : val;
         } else {
             int[] next = new int[midIndex];
             for (int i = 0; i < midIndex; i++) {
